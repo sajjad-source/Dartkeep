@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import eslint from 'vite-plugin-eslint';
 import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
   plugins: [
@@ -10,6 +11,7 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
+        tailwindcss(),
         autoprefixer(),
       ],
     },
