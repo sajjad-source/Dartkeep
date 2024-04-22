@@ -18,8 +18,7 @@ const database = firebase.database();
 
 export const addNote = (newNote) => {
   const noteRef = database.ref('notes').push();
-  const newNoteWithId = { ...newNote, id: noteRef.key };
-  noteRef.set(newNoteWithId);
+  noteRef.set(newNote);
 };
 
 export const editNote = (updatedNote) => {

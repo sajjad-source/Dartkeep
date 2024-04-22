@@ -1,5 +1,5 @@
 import React from 'react';
-import Note from './note';
+import Note from './Note';
 
 function NoteList({
  notes, handleNoteDelete, handleDrag, handleResize, handleNoteEdit,

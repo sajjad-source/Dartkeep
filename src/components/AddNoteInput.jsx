@@ -31,18 +31,18 @@ function AddNoteInput({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto my-8 p-4 bg-dark-blue shadow-lg rounded-lg">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto my-8 p-4 bg-gray-800 shadow-lg rounded-lg">
       <input
         type="text"
         value={inputTitle}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="Enter title"
+        placeholder="Title"
         className="w-full p-2 rounded-lg border border-gray-900 mb-4 bg-gray-800 text-white placeholder-white"
       />
       <textarea
         value={inputText}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Enter note text"
+        placeholder="Take a note..."
         className="block w-full p-2 rounded-lg border border-gray-900 mb-4 bg-gray-800 text-white placeholder-white"
       />
       <div className="flex justify-end space-x-4">
@@ -52,7 +52,7 @@ function AddNoteInput({
           {isEditing ? 'Save Changes' : 'Add Note'}
         </button>
         {isEditing && (
-          <button type="button" onClick={handleCancelEdit} className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded">
+          <button type="button" onClick={handleCancelEdit} className="hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
             Cancel
           </button>
         )}

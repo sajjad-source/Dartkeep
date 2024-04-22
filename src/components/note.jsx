@@ -24,7 +24,7 @@ function Note(props) {
         onResize={(event, { size }) => props.handleResize(props.id, size.width, size.height)}
         minConstraints={[200, 200]}
       >
-        <div className="note bg-[#1E293B] rounded-lg shadow p-5 m-2 flex flex-col justify-between" style={{ width: props.width, height: props.height }}>
+        <div className="note bg-[#1E293B] rounded-lg shadow p-5 m-2 flex flex-col justify-end" style={{ width: props.width, height: props.height }}>
           <div className="note-handle cursor-move bg-[#111822] rounded -m-5 p-2">
             <h2 className="font-semibold text-lg truncate">
               {props.title ? props.title : 'Add Title'}
