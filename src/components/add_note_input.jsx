@@ -10,7 +10,6 @@ function AddNoteInput({
     e.preventDefault();
 
     const noteData = {
-      id: note ? note.id : Math.random(),
       title: inputTitle,
       text: inputText,
       x: note ? note.x : 100,
@@ -21,6 +20,7 @@ function AddNoteInput({
     };
 
     if (isEditing) {
+      noteData.id = note.id;
       handleSaveEdit(noteData);
     } else {
       handleAddNote(noteData);
@@ -31,26 +31,28 @@ function AddNoteInput({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto my-8 p-4 bg-dark-blue shadow-lg rounded-lg">
       <input
         type="text"
         value={inputTitle}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Enter title"
-        className="block w-full p-2 border border-gray-300 rounded"
+        className="w-full p-2 rounded-lg border border-gray-900 mb-4 bg-gray-800 text-white placeholder-white"
       />
       <textarea
         value={inputText}
         onChange={(e) => setText(e.target.value)}
         placeholder="Enter note text"
-        className="block w-full p-2 border border-gray-300 rounded"
+        className="block w-full p-2 rounded-lg border border-gray-900 mb-4 bg-gray-800 text-white placeholder-white"
       />
       <div className="flex justify-end space-x-4">
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button type="submit"
+          className="background-color: transparent; hover:bg-gray-900 text-gray-100 font-bold py-2 px-4 rounded"
+        >
           {isEditing ? 'Save Changes' : 'Add Note'}
         </button>
         {isEditing && (
-          <button type="button" onClick={handleCancelEdit} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          <button type="button" onClick={handleCancelEdit} className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded">
             Cancel
           </button>
         )}

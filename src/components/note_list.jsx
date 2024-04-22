@@ -4,9 +4,11 @@ import Note from './note';
 function NoteList({
  notes, handleNoteDelete, handleDrag, handleResize, handleNoteEdit,
 }) {
+  const entries = notes ? Object.entries(notes) : [];
+
   return (
     <div className="note-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {Object.entries(notes).map(([id, note]) => (
+      {entries.map(([id, note]) => (
         <Note
           key={id}
           id={id}

@@ -24,18 +24,25 @@ function Note(props) {
         onResize={(event, { size }) => props.handleResize(props.id, size.width, size.height)}
         minConstraints={[200, 200]}
       >
-        <div className="note bg-white rounded-lg shadow p-4" style={{ width: props.width, height: props.height }}>
-          <h2 className="font-semibold text-lg note-handle cursor-move">
-            {props.title}
-          </h2>
-          <ReactMarkdown className="prose text-gray-700">{props.text}</ReactMarkdown>
-          <i onClick={onDeleteClick} className="cursor-pointer" role="none">
-            <FontAwesomeIcon icon={faTrashCan} />
-          </i>
-          <i onClick={onEditClick} className="cursor-pointer" role="none">
-            <FontAwesomeIcon icon={faPenToSquare} />
-          </i>
+        <div className="note bg-[#1E293B] rounded-lg shadow p-5 m-2 flex flex-col justify-between" style={{ width: props.width, height: props.height }}>
+          <div className="note-handle cursor-move bg-[#111822] rounded -m-5 p-2">
+            <h2 className="font-semibold text-lg truncate">
+              {props.title ? props.title : 'Add Title'}
+            </h2>
+          </div>
+          <div className="flex-1 pt-7 overflow-clip -m-1.5">
+            <ReactMarkdown className="prose text-white">{props.text}</ReactMarkdown>
+          </div>
+          <div className="flex justify-start space-x-2 mt-4">
+            <i onClick={onEditClick} className="cursor-pointer" role="none">
+              <FontAwesomeIcon icon={faPenToSquare} />
+            </i>
+            <i onClick={onDeleteClick} className="cursor-pointer" role="none">
+              <FontAwesomeIcon icon={faTrashCan} />
+            </i>
+          </div>
         </div>
+
       </Resizable>
     </Draggable>
   );
