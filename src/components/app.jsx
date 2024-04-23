@@ -17,7 +17,6 @@ import SearchBar from './SearchBar';
 TODO: Authentication/Sign In?
 TODO: Reminder Tab
 TODO: Trash Tab
-TODO: Z Index on Select
 
 */
 
