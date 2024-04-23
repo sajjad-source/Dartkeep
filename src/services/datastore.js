@@ -30,9 +30,15 @@ export const deleteNote = (id) => {
   database.ref('notes').child(id).remove();
 };
 
-export const dragNote = (id, newX, newY) => {
-  database.ref('notes').child(id).update({ x: newX });
-  database.ref('notes').child(id).update({ y: newY });
+export const dragNote = (id, newX, newY, currentMaxZIndex) => {
+  const newZIndex = currentMaxZIndex + 1;
+  const updates = {
+    x: newX,
+    y: newY,
+    zIndex: newZIndex,
+  };
+  database.ref('notes').child(id).update(updates);
+  database.ref('maxZIndex').set(newZIndex);
 };
 
 export const resizeNote = (id, newWidth, newHeight) => {

@@ -2,12 +2,16 @@ import React from 'react';
 import Note from './Note';
 
 function NoteList({
- notes, handleNoteDelete, handleDrag, handleResize, handleNoteEdit,
+  notes,
+  handleNoteDelete,
+  handleDrag,
+  handleResize,
+  handleNoteEdit,
 }) {
   const entries = notes ? Object.entries(notes) : [];
 
   return (
-    <div className="note-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="note-list grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {entries.map(([id, note]) => (
         <Note
           key={id}

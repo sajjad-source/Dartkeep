@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import {
-ChevronLast, ChevronFirst, Notebook, Bell, Users, Trash2,
+  ChevronLast,
+  ChevronFirst,
+  Notebook,
+  Bell,
+  Users,
+  Trash2,
 } from 'lucide-react';
 import SidebarItem from './SidebarItem';
 
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(true);
   return (
-    <aside className="h-screen">
-      <nav className="h-full w-auto flex flex-col bg-slate-900 border-r-2 border-dark-blue">
-        <div className="p-4 flex justify-end items-center">
-
-          <button type="button"
+    <aside className="h-screen overflow-y-auto">
+      <nav className="flex h-full w-auto flex-col border-r-2 border-dark-blue bg-slate-900">
+        <div className="flex items-center justify-end p-4">
+          <button
+            type="button"
             onClick={() => setExpanded((curr) => !curr)}
             className="p-1.5"
           >
@@ -20,22 +25,38 @@ export default function Sidebar() {
         </div>
 
         <ul className="flex-1 px-3">
-          <SidebarItem icon={<Notebook size={20} />} text="Notes" expanded={expanded} />
-          <SidebarItem icon={<Bell size={20} />} text="Reminder" expanded={expanded} />
-          <SidebarItem icon={<Users size={20} />} text="Users" expanded={expanded} />
-          <SidebarItem icon={<Trash2 size={20} />} text="Trash" expanded={expanded} />
+          <SidebarItem
+            icon={<Notebook size={20} />}
+            text="Notes"
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<Bell size={20} />}
+            text="Reminder"
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<Users size={20} />}
+            text="Users"
+            expanded={expanded}
+          />
+          <SidebarItem
+            icon={<Trash2 size={20} />}
+            text="Trash"
+            expanded={expanded}
+          />
         </ul>
 
-        <div className="border-t border-dark-blue flex p-3">
+        <div className="flex border-t border-dark-blue p-3">
           <img
             src="src/img/avatar.png"
             alt=""
-            className="w-10 h-10 rounded-full"
+            className="h-10 w-10 rounded-full"
           />
           <div
             className={`
-              flex justify-between items-center
-              overflow-hidden transition-all ${expanded ? 'w-fit ml-3' : 'w-0'}
+              flex items-center justify-between
+              overflow-hidden transition-all ${expanded ? 'ml-3 w-fit' : 'w-0'}
           `}
           >
             <div className="leading-4">

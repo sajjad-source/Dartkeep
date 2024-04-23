@@ -24,16 +24,25 @@ function Note(props) {
         onResize={(event, { size }) => props.handleResize(props.id, size.width, size.height)}
         minConstraints={[200, 200]}
       >
-        <div className="note bg-[#1E293B] rounded-lg shadow p-5 m-2 flex flex-col justify-end" style={{ width: props.width, height: props.height }}>
-          <div className="note-handle cursor-move bg-[#111822] rounded -m-5 p-2">
-            <h2 className="font-semibold text-lg truncate">
+        <div
+          className="note m-2 flex flex-col justify-end rounded-lg bg-[#1E293B] p-5 shadow"
+          style={{
+            width: props.width,
+            height: props.height,
+            zIndex: props.zIndex,
+          }}
+        >
+          <div className="note-handle -m-5 cursor-move rounded bg-[#111822] p-2">
+            <h2 className="truncate text-lg font-semibold">
               {props.title ? props.title : 'Add Title'}
             </h2>
           </div>
-          <div className="flex-1 pt-7 overflow-clip -m-1.5">
-            <ReactMarkdown className="prose text-white">{props.text}</ReactMarkdown>
+          <div className="mt-6 flex-1 overflow-auto">
+            <ReactMarkdown className="prose text-white">
+              {props.text}
+            </ReactMarkdown>
           </div>
-          <div className="flex justify-start space-x-2 mt-4">
+          <div className="mt-4 flex justify-start space-x-2">
             <i onClick={onEditClick} className="cursor-pointer" role="none">
               <FontAwesomeIcon icon={faPenToSquare} />
             </i>
@@ -42,7 +51,6 @@ function Note(props) {
             </i>
           </div>
         </div>
-
       </Resizable>
     </Draggable>
   );
