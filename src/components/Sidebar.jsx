@@ -7,7 +7,7 @@ import {
   Users,
   Trash2,
 } from 'lucide-react';
-import SidebarItem from './SidebarItem';
+import SidebarItem from './sidebar_item';
 
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(true);
