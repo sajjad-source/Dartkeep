@@ -49,7 +49,7 @@ export default function Navbar() {
 
         <div className="flex border-t border-dark-blue p-3">
           <img
-            src="src/img/avatar.png"
+            src="/src/img/avatar.png"
             alt=""
             className="h-10 w-10 rounded-full"
           />
