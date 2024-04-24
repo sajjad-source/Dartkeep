@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import AddNoteInput from './add_note_input';
 import NoteList from './note_list';
+import Sidebar from './sidebar';
 import {
   addNote,
   deleteNote,
@@ -9,7 +10,6 @@ import {
   resizeNote,
   dragNote,
 } from '../services/datastore';
-import Sidebar from './sidebar';
 import SearchBar from './search_bar';
 
 /*
