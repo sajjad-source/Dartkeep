@@ -2,7 +2,7 @@
 
 A real time based note taking app with a sleek UI/UX interface, allowing for easy note management and sharing.
 
-[deployed url](http://url-if-deployed-here)
+[Deployed URL](https://lab3-react-notes-sajjad-source.onrender.com)
 
 ## What Worked Well
 
