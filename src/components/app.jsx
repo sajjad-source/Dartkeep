@@ -98,7 +98,7 @@ function App() {
       <Navbar />
       <main className="flex-1">
         {isEditing && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-600 bg-opacity-50 transition duration-500 ease-in-out">
+          <div className="fixed inset-0 z-[99999999] flex items-center justify-center bg-gray-600 bg-opacity-50 transition duration-500 ease-in-out">
             <AddNoteInput
               note={notes[editingNoteId]}
               handleSaveEdit={handleSaveEdit}
