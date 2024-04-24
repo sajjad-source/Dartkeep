@@ -13,6 +13,8 @@ function AddNoteInput({
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log('Current note in handleSubmit:', note);
+
     const noteData = {
       title: inputTitle,
       text: inputText,
@@ -21,9 +23,11 @@ function AddNoteInput({
       zIndex: note ? note.zIndex : 1,
       width: note ? note.width : 200,
       height: note ? note.height : 200,
+      id: note ? note.id : undefined,
     };
 
     if (isEditing) {
+      console.log('note id before save:', note.id);
       noteData.id = note.id;
       handleSaveEdit(noteData);
     } else {

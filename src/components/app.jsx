@@ -62,6 +62,7 @@ function App() {
   };
 
   const handleSaveEdit = (note) => {
+    console.log('note in handleSaveEdit:', note);
     editNote(note);
     setIsEditing(false);
     setEditingNoteId(null);
@@ -74,7 +75,6 @@ function App() {
 
   const handleDrag = (id, newX, newY) => {
     dragNote(id, newX, newY, maxZIndex);
-    console.log(notes[id].zIndex);
   };
 
   const handleResize = (id, width, height) => {
