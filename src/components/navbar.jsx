@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import SidebarItem from './sidebar_item';
 
-export default function Sidebar() {
+export default function Navbar() {
   const [expanded, setExpanded] = useState(true);
   return (
     <aside className="h-screen overflow-y-auto">

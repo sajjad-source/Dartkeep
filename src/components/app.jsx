@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import AddNoteInput from './add_note_input';
 import NoteList from './note_list';
-import Sidebar from './sidebar';
+import Navbar from './navbar';
 import {
   addNote,
   deleteNote,
@@ -95,7 +95,7 @@ function App() {
 
   return (
     <div className="flex min-h-screen text-light-gray">
-      <Sidebar />
+      <Navbar />
       <main className="flex-1">
         {isEditing && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-600 bg-opacity-50 transition duration-500 ease-in-out">
