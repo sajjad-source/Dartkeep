@@ -8,6 +8,7 @@ import {
   Trash2,
 } from 'lucide-react';
 import SidebarItem from './sidebar_item';
+import avatar from '../img/avatar.png';
 
 export default function Navbar() {
   const [expanded, setExpanded] = useState(true);
@@ -49,7 +50,7 @@ export default function Navbar() {
 
         <div className="flex border-t border-dark-blue p-3">
           <img
-            src="/src/img/avatar.png"
+            src={avatar}
             alt=""
             className="h-10 w-10 rounded-full"
           />
