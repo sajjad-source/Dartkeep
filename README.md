@@ -1,8 +1,6 @@
-# DartKeep
+# [DartKeep](https://notes-sck.onrender.com/)
 
 A real time based note taking app with a sleek UI/UX interface, allowing for easy note management and sharing.
-
-[Deployed URL](https://dartkeep.onrender.com)
 
 ## Features
 
