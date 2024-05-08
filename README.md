@@ -2,29 +2,36 @@
 
 A real time based note taking app with a sleek UI/UX interface, allowing for easy note management and sharing.
 
-[Deployed URL](https://lab3-react-notes-sajjad-source.onrender.com)
+[Deployed URL](https://dartkeep.onrender.com)
 
-## What Worked Well
+## Features
 
-- Planning what components I had and how they were going to interact with each other (props, states, etc.) worked out really well.
-- This allowed for smooth implementation for a lot of the core functionality such as adding, deleting, editing, etc.
-- Integration with real-time firebase storage was smooth due to the logic and code being well-written / organized.
+- **Create Notes**: Easily jot down new notes with a user-friendly interface.
+- **Edit Notes**:  Seamlessly modify existing notes to keep information up-to-date.
+- **Delete Notes**: Effortlessly remove unwanted notes to maintain a clutter-free workspace
+- **Search**: Quickly find specific notes using the search functionality.
+- **Sharing**: Can share notes with other users. All notes are stored on Firebase
 
-## What Didn't
+## Technologies Used
 
-- Styling the UI/UX. Since it was my first time not using regular CSS, and working with a pre-built HTML structure, I had a bit of trouble visualizing what the HTML structure looks like from React.
-- Using Tailwind was a learning experience, from reading their documentations, to figuring out how to install and configure certain plugins. However, I loved it! And can see why it is a go to.
-- As I started expanding functionality and adding extra-credit, maintaing a lot of components/states, and passing props became a bit messy. It became harder and harder for me to try to scale this application.
+- **React**: For building the user interface.
+- **Firebase**: For storing the data of notes and managing CRUD operations.
+- **Tailwind CSS**: For styling and designing a responsive layout.
 
-## Extra Credit
+## Local Development
 
-- Implemented resizable and scrollable notes that update in real-time, enhancing user interaction and visual organization.
-- Enhanced z-index management ensures that notes are appropriately layered when dragged or interacted with, with modals taking precedence during edits.
-- Added a search functionality that allows filtering of notes based on their titles or content, providing a more efficient way to locate specific information.
-- Organized notes in a grid layout which maintains a structured appearance regardless of note modifications, such as additions or deletions.
-- Designed a user-friendly interface featuring a retractable sidebar with hover capabilities that display the name, improving navigation and aesthetic appeal.`
+Follow these steps to set up Dartcook for local development:
 
-## Screenshots
-
-![](/src/img/NoteApp.png)
-![](/src/img/ClosedSidebar.png)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sajjad-source/Dartkeep.git
+   cd dartkeep
+   ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Start the development server
+    ```bash
+    npm run dev 
+    ```
